@@ -1,0 +1,106 @@
+[
+  {
+    "id": "road-transport",
+    "title": "Road Transport",
+    "subtitle": "Pan India Coverage",
+    "icon": "🚚",
+    "color": "#003087",
+    "heroDescription": "PTC Logistics offers comprehensive Pan India road transport services, connecting major cities, industrial zones, ports, and warehouses with speed and reliability.",
+    "shortDescription": "Pan India road transport connecting cities, industrial zones, ports and warehouses with full and part load options.",
+    "features": [
+      "Full Truck Load (FTL)",
+      "Part Load (LTL)",
+      "Door-to-Door Delivery",
+      "Industrial Cargo Transportation",
+      "Factory to Warehouse Transport",
+      "Long Distance Dedicated Vehicles",
+      "Temperature Controlled Transport",
+      "Hazardous Material Transport"
+    ],
+    "benefits": [
+      { "title": "Extensive Network", "desc": "Covering 200+ cities and towns across India" },
+      { "title": "GPS Tracking", "desc": "Real-time shipment tracking for complete visibility" },
+      { "title": "Flexible Options", "desc": "FTL and LTL solutions to match your cargo size" },
+      { "title": "Timely Delivery", "desc": "Committed delivery timelines with professional drivers" }
+    ],
+    "industries": ["Manufacturing", "FMCG", "Automotive", "Pharmaceutical", "E-Commerce", "Retail"]
+  },
+  {
+    "id": "air-freight",
+    "title": "Air Freight",
+    "subtitle": "Fast & Secure",
+    "icon": "✈️",
+    "color": "#0044b8",
+    "heroDescription": "Our air freight services are designed for fast and secure transportation of urgent shipments both domestically and internationally, with complete documentation support.",
+    "shortDescription": "Fast and secure air cargo services for domestic and international shipments with express handling and tracking.",
+    "features": [
+      "Domestic Air Cargo",
+      "International Air Freight",
+      "Airport to Airport Delivery",
+      "Door-to-Door Air Cargo",
+      "Express Cargo Handling",
+      "Perishable Cargo Services",
+      "Dangerous Goods Handling",
+      "Customs Clearance Support"
+    ],
+    "benefits": [
+      { "title": "Speed", "desc": "Fastest mode of transport for urgent shipments" },
+      { "title": "Security", "desc": "High-security handling with strict protocols" },
+      { "title": "Global Reach", "desc": "Connected to 100+ international destinations" },
+      { "title": "Documentation", "desc": "Complete AWB and customs documentation support" }
+    ],
+    "industries": ["Pharmaceuticals", "Electronics", "Perishables", "Fashion", "Aerospace", "Healthcare"]
+  },
+  {
+    "id": "sea-freight",
+    "title": "Sea Freight",
+    "subtitle": "Cost-Effective Global",
+    "icon": "🚢",
+    "color": "#1a5276",
+    "heroDescription": "PTC Logistics offers cost-effective international sea freight services for bulk and commercial cargo, providing reliable shipping solutions for global trade.",
+    "shortDescription": "Cost-effective sea freight for bulk cargo with FCL and LCL options, complete port documentation and global forwarding.",
+    "features": [
+      "FCL (Full Container Load)",
+      "LCL (Less than Container Load)",
+      "Export & Import Cargo Handling",
+      "Port Documentation Support",
+      "International Freight Forwarding",
+      "Reefer Container Services",
+      "Break Bulk Cargo",
+      "Roll-on/Roll-off (RoRo)"
+    ],
+    "benefits": [
+      { "title": "Cost Effective", "desc": "Most economical option for large volume shipments" },
+      { "title": "High Capacity", "desc": "Handles oversized, heavy, and bulk cargo" },
+      { "title": "Port Coverage", "desc": "Major Indian ports: JNPT, Mundra, Chennai, Kolkata" },
+      { "title": "Global Trade", "desc": "Connecting India to Asia, Europe, Americas & Africa" }
+    ],
+    "industries": ["Steel & Metals", "Chemicals", "Machinery", "Agriculture", "Textiles", "Construction"]
+  },
+  {
+    "id": "import-export",
+    "title": "Import & Export",
+    "subtitle": "Custom Clearance & Trade",
+    "icon": "🌐",
+    "color": "#e8a000",
+    "heroDescription": "PTC Logistics assists businesses with complete import and export logistics support, ensuring smooth cargo movement between countries with expert documentation and customs handling.",
+    "shortDescription": "End-to-end import/export logistics with customs clearance, documentation, and freight forwarding solutions.",
+    "features": [
+      "Export Cargo Handling",
+      "Import Cargo Coordination",
+      "Shipping Documentation Support",
+      "Cargo Packing & Palletization",
+      "Freight Forwarding Solutions",
+      "Customs Clearance",
+      "Letter of Credit Assistance",
+      "Trade Compliance Advisory"
+    ],
+    "benefits": [
+      { "title": "Expert Compliance", "desc": "Up-to-date with EXIM policies and trade regulations" },
+      { "title": "Documentation", "desc": "Complete paperwork from invoice to Bill of Lading" },
+      { "title": "Customs Expertise", "desc": "Swift customs clearance minimizing delays" },
+      { "title": "End-to-End", "desc": "Single point of contact from origin to destination" }
+    ],
+    "industries": ["All Sectors", "Government", "PSUs", "SMEs", "Large Enterprises", "Startups"]
+  }
+]

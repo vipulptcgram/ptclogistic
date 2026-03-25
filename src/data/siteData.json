@@ -1,0 +1,77 @@
+{
+  "company": {
+    "name": "PTC Logistics",
+    "tagline": "Pan India Transport. Global Logistics Solutions.",
+    "description": "PTC Logistics provides reliable and efficient freight services through Air, Road, and Sea transportation. With a strong logistics network, we ensure safe, timely, and cost-effective delivery of goods across India and international destinations.",
+    "email": "info@ptclogistics.com",
+    "phone": "+91 98765 43210",
+    "phone2": "+91 80000 12345",
+    "address": "PTC Logistics Pvt. Ltd., Office No. 204, Logistics Hub, Virar East, Mumbai - 400069, Maharashtra, India",
+    "gst": "27AABCP1234A1Z5",
+    "founded": "2010",
+    "social": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#",
+      "instagram": "#"
+    }
+  },
+  "stats": [
+    { "value": "5000+", "label": "Shipments Delivered", "icon": "📦" },
+    { "value": "200+", "label": "Cities Covered", "icon": "🗺️" },
+    { "value": "15+", "label": "Years Experience", "icon": "🏆" },
+    { "value": "500+", "label": "Happy Clients", "icon": "🤝" }
+  ],
+  "whyUs": [
+    {
+      "title": "Pan India Road Network",
+      "description": "Extensive transport network covering all major cities, industrial zones, ports, and warehouses across India.",
+      "icon": "🛣️"
+    },
+    {
+      "title": "Fast & Reliable",
+      "description": "Committed to on-time delivery with real-time tracking and professional logistics support.",
+      "icon": "⚡"
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "Cost-effective logistics solutions tailored to your business needs without compromising on quality.",
+      "icon": "💰"
+    },
+    {
+      "title": "Safe Cargo Handling",
+      "description": "Trained professionals ensure your cargo is handled with utmost care from pickup to delivery.",
+      "icon": "🛡️"
+    },
+    {
+      "title": "Global Reach",
+      "description": "International air and sea freight solutions connecting India to global trade destinations.",
+      "icon": "🌍"
+    },
+    {
+      "title": "Expert Documentation",
+      "description": "Complete assistance with shipping documentation, customs clearance, and freight forwarding.",
+      "icon": "📋"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rajesh Mehta",
+      "company": "Mehta Industries Pvt. Ltd.",
+      "text": "PTC Logistics has been our trusted partner for over 5 years. Their Pan India road transport is exceptionally reliable and the team is always responsive to our needs.",
+      "rating": 5
+    },
+    {
+      "name": "Priya Sharma",
+      "company": "Global Textiles Co.",
+      "text": "We use their air freight and sea freight services for international shipments. The documentation support and timely delivery have helped us grow our export business significantly.",
+      "rating": 5
+    },
+    {
+      "name": "Amit Patel",
+      "company": "Patel Auto Components",
+      "text": "Efficient, professional, and cost-effective. PTC Logistics handles all our FTL requirements across India. Highly recommend for industrial cargo transport.",
+      "rating": 5
+    }
+  ]
+}
