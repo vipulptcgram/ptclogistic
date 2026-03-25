@@ -195,7 +195,7 @@ const ContactPage = () => {
           <div className="text-center">
             <div className="text-5xl mb-3">📍</div>
             <div className="font-heading text-2xl font-bold text-primary uppercase">PTC Logistics Pvt. Ltd.</div>
-            <div className="text-gray-600 text-sm mt-1">Virar East, Mumbai – 400069, Maharashtra, India</div>
+            <div className="text-gray-600 text-sm mt-1">Virar East, Mumbai, Maharashtra, India</div>
             <a
               href="https://maps.google.com/?q=Virar+East+Mumbai"
               target="_blank"

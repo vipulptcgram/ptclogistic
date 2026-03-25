@@ -19,7 +19,7 @@ const Layout = () => {
       <Footer />
 
       {/* Floating WhatsApp */}
-      <a
+      {/* <a
         href="https://wa.me/919876543210"
         target="_blank"
         rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const Layout = () => {
         title="Chat on WhatsApp"
       >
         💬
-      </a>
+      </a> */}
 
       {/* Back to top */}
       <button
