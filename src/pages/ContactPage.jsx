@@ -102,7 +102,7 @@ const ContactPage = () => {
                       <input
                         type="tel" name="phone" required value={form.phone} onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                        placeholder="+91 85303 40676"
+                        placeholder="+91 97108 79879"
                       />
                     </div>
                     <div>

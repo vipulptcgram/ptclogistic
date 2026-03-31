@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="bg-primary-dark text-white text-xs py-2 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-6">
-            <a href="tel:+9185303 40676" className="hover:text-accent transition-colors">📞 +91 85303 40676</a>
+            <a href="tel:+9197108 79879" className="hover:text-accent transition-colors">📞 +91 97108 79879</a>
             <a href="mailto:info@ptclogistics.com" className="hover:text-accent transition-colors">✉ info@ptclogistics.com</a>
           </div>
           <div className="flex gap-4">
