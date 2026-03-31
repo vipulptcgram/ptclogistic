@@ -62,7 +62,7 @@ const HomePage = () => {
               <div className="font-heading text-2xl font-bold text-white uppercase">Quick Contact</div>
               <div className="space-y-4">
                 {[
-                  { label: 'Phone', value: '+91 98765 43210', icon: '📞', href: 'tel:+919876543210' },
+                  { label: 'Phone', value: '+91 85303 40676', icon: '📞', href: 'tel:+918530340676' },
                   { label: 'Email', value: 'info@ptclogistics.com', icon: '✉', href: 'mailto:info@ptclogistics.com' },
                   { label: 'Office', value: 'Virar East, Mumbai', icon: '📍', href: '#' },
                   { label: 'Hours', value: 'Mon–Sat: 9AM – 6PM', icon: '🕐', href: '#' },

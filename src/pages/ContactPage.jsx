@@ -102,7 +102,7 @@ const ContactPage = () => {
                       <input
                         type="tel" name="phone" required value={form.phone} onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-primary transition-colors"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 85303 40676"
                       />
                     </div>
                     <div>
@@ -161,8 +161,8 @@ const ContactPage = () => {
                   <p className="text-gray-300 leading-relaxed">{company.address}</p>
                 </div>
                 <div>
-                  <div className="text-accent font-semibold uppercase tracking-wide text-xs mb-1">GST No.</div>
-                  <p className="text-gray-300">{company.gst}</p>
+                  {/* <div className="text-accent font-semibold uppercase tracking-wide text-xs mb-1">GST No.</div> */}
+                  {/* <p className="text-gray-300">{company.gst}</p> */}
                 </div>
               </div>
             </div>

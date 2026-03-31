@@ -101,7 +101,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} PTC Logistics Pvt. Ltd. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <span>GST: {company.gst}</span>
+            {/* <span>GST: {company.gst}</span> */}
             <span>|</span>
             <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>

@@ -91,7 +91,7 @@ const ServiceDetailPage = () => {
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex gap-3">
                   <span className="text-accent">📞</span>
-                  <a href="tel:+919876543210" className="hover:text-accent">+91 98765 43210</a>
+                  <a href="tel:+918530340676" className="hover:text-accent">+91 85303 40676</a>
                 </div>
                 <div className="flex gap-3">
                   <span className="text-accent">✉</span>
