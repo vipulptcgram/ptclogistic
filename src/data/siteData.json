@@ -16,41 +16,41 @@
     }
   },
   "stats": [
-    { "value": "5000+", "label": "Shipments Delivered", "icon": "📦" },
-    { "value": "200+", "label": "Cities Covered", "icon": "🗺️" },
-    { "value": "15+", "label": "Years Experience", "icon": "🏆" },
-    { "value": "500+", "label": "Happy Clients", "icon": "🤝" }
+    { "value": "5000+", "label": "Shipments Delivered", "icon": "package" },
+    { "value": "200+", "label": "Cities Covered", "icon": "mapPin" },
+    { "value": "15+", "label": "Years Experience", "icon": "trophy" },
+    { "value": "500+", "label": "Happy Clients", "icon": "handshake" }
   ],
   "whyUs": [
     {
       "title": "Pan India Road Network",
       "description": "Extensive transport network covering all major cities, industrial zones, ports, and warehouses across India.",
-      "icon": "🛣️"
+      "icon": "route"
     },
     {
       "title": "Fast & Reliable",
       "description": "Committed to on-time delivery with real-time tracking and professional logistics support.",
-      "icon": "⚡"
+      "icon": "zap"
     },
     {
       "title": "Competitive Pricing",
       "description": "Cost-effective logistics solutions tailored to your business needs without compromising on quality.",
-      "icon": "💰"
+      "icon": "dollar"
     },
     {
       "title": "Safe Cargo Handling",
       "description": "Trained professionals ensure your cargo is handled with utmost care from pickup to delivery.",
-      "icon": "🛡️"
+      "icon": "shield"
     },
     {
       "title": "Global Reach",
       "description": "International air and sea freight solutions connecting India to global trade destinations.",
-      "icon": "🌍"
+      "icon": "globe"
     },
     {
       "title": "Expert Documentation",
       "description": "Complete assistance with shipping documentation, customs clearance, and freight forwarding.",
-      "icon": "📋"
+      "icon": "fileText"
     }
   ],
   "testimonials": [

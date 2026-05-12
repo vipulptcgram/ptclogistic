@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero';
 import CTABanner from '../components/CTABanner';
 import siteData from '../data/siteData.json';
 import { StatCard } from '../components/UIComponents';
+import Icon from '../components/Icon';
 
 const milestones = [
   { year: '2010', title: 'Founded', desc: 'PTC Logistics established in Mumbai with a vision to transform freight logistics in India.' },
@@ -33,8 +34,8 @@ const AboutPage = () => {
       />
 
       {/* ── INTRO ─────────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <div className="section-subtitle">Who We Are</div>
             <h2 className="section-title mb-6">Delivering Trust Through Logistics</h2>
@@ -53,31 +54,31 @@ const AboutPage = () => {
                 'Serving 500+ Clients Pan India & Globally',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm text-gray-700">
-                  <span className="w-5 h-5 bg-accent rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">✓</span>
+                  <span className="w-5 h-5 bg-accent rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"><Icon name="check" className="w-3 h-3" /></span>
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-primary p-8 text-white">
-              <div className="font-heading text-5xl font-black text-accent">15+</div>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            <div className="bg-primary p-5 md:p-8 text-white">
+              <div className="font-heading text-3xl md:text-5xl font-black text-accent">15+</div>
               <div className="font-heading text-xl font-bold uppercase mt-1">Years Experience</div>
               <p className="text-gray-300 text-xs mt-2">Trusted logistics expertise since 2010</p>
             </div>
-            <div className="bg-accent p-8 text-white mt-6">
-              <div className="font-heading text-5xl font-black text-white">200+</div>
+            <div className="bg-accent p-5 md:p-8 text-white mt-4 md:mt-6">
+              <div className="font-heading text-3xl md:text-5xl font-black text-white">200+</div>
               <div className="font-heading text-xl font-bold uppercase mt-1">Cities Covered</div>
               <p className="text-white/70 text-xs mt-2">Pan India road transport network</p>
             </div>
-            <div className="bg-neutral-light p-8 -mt-6">
-              <div className="font-heading text-5xl font-black text-primary">500+</div>
+            <div className="bg-neutral-light p-5 md:p-8 -mt-4 md:-mt-6">
+              <div className="font-heading text-3xl md:text-5xl font-black text-primary">500+</div>
               <div className="font-heading text-xl font-bold uppercase mt-1 text-primary">Happy Clients</div>
               <p className="text-gray-500 text-xs mt-2">Building long-term partnerships</p>
             </div>
-            <div className="bg-neutral-mid p-8 text-white">
-              <div className="font-heading text-5xl font-black text-accent">5000+</div>
+            <div className="bg-neutral-mid p-5 md:p-8 text-white">
+              <div className="font-heading text-3xl md:text-5xl font-black text-accent">5000+</div>
               <div className="font-heading text-xl font-bold uppercase mt-1">Shipments</div>
               <p className="text-gray-300 text-xs mt-2">Delivered safely and on time</p>
             </div>
@@ -86,28 +87,28 @@ const AboutPage = () => {
       </section>
 
       {/* ── MISSION & VISION ──────────────────────── */}
-      <section className="py-20 bg-neutral-light">
+      <section className="py-14 md:py-20 bg-neutral-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: 'Our Mission',
-                icon: '🎯',
+                icon: 'target',
                 text: 'To provide reliable, safe, and efficient logistics solutions that help businesses across India and globally move their cargo seamlessly, while continuously improving our service quality and expanding our network.',
               },
               {
                 title: 'Our Vision',
-                icon: '🔭',
+                icon: 'telescope',
                 text: 'To be the most trusted and preferred logistics partner for businesses of all sizes across India and the world, known for our reliability, innovation, and commitment to excellence in freight forwarding.',
               },
               {
                 title: 'Our Values',
-                icon: '💎',
+                icon: 'gem',
                 text: 'Integrity in every transaction, reliability in every delivery, respect for our clients and partners, and continuous innovation to stay ahead in the dynamic logistics industry.',
               },
             ].map(({ title, icon, text }) => (
-              <div key={title} className="bg-white p-8 border-t-4 border-accent hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{icon}</div>
+              <div key={title} className="bg-white p-6 md:p-8 border-t-4 border-accent hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4 text-primary"><Icon name={icon} className="w-9 h-9" /></div>
                 <h3 className="font-heading text-2xl font-bold uppercase text-primary mb-3">{title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
               </div>
@@ -117,7 +118,7 @@ const AboutPage = () => {
       </section>
 
       {/* ── MILESTONES ────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="section-subtitle">Our Journey</div>
@@ -151,7 +152,7 @@ const AboutPage = () => {
       </section>
 
       {/* ── TEAM ──────────────────────────────────── */}
-      <section className="py-20 bg-neutral-light">
+      {/* <section className="py-20 bg-neutral-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="section-subtitle">Leadership</div>
@@ -169,10 +170,10 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── STATS BAR ─────────────────────────────── */}
-      <section className="bg-primary py-14">
+      <section className="bg-primary py-12 md:py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, i) => (

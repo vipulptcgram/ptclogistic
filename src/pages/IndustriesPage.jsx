@@ -2,76 +2,77 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import CTABanner from '../components/CTABanner';
+import Icon from '../components/Icon';
 
 const industries = [
   {
-    icon: '🏭',
+    icon: 'factory',
     title: 'Manufacturing',
     desc: 'We support manufacturing units with reliable raw material inbound logistics and finished goods outbound distribution across India and globally.',
     services: ['FTL Road Transport', 'Factory to Warehouse', 'Industrial Cargo', 'International Freight'],
   },
   {
-    icon: '💊',
+    icon: 'pill',
     title: 'Pharmaceuticals',
     desc: 'Temperature-sensitive pharmaceutical cargo handled with care. Compliant with GDP guidelines for safe drug transport across domestic and international routes.',
     services: ['Cold Chain Logistics', 'Air Freight', 'Regulatory Compliance', 'Express Delivery'],
   },
   {
-    icon: '🚗',
+    icon: 'car',
     title: 'Automotive',
     desc: 'Dedicated solutions for automotive OEMs, Tier-1, and Tier-2 suppliers. Just-in-time delivery, cross-docking, and multi-modal transport for auto parts.',
     services: ['JIT Delivery', 'Part Load (LTL)', 'FTL Transport', 'Port Handling'],
   },
   {
-    icon: '📦',
+    icon: 'package',
     title: 'E-Commerce',
     desc: 'Fast-paced e-commerce logistics with last-mile delivery, returns management, and fulfillment center connectivity across major Indian cities.',
     services: ['Last Mile Delivery', 'Reverse Logistics', 'Express Air Cargo', 'Pan India Road'],
   },
   {
-    icon: '🧵',
+    icon: 'shirt',
     title: 'Textiles & Apparel',
     desc: 'Export and import freight solutions for garment manufacturers and textile exporters connecting to global fashion markets via air and sea.',
     services: ['Sea Freight Export', 'Air Freight', 'Port Documentation', 'LCL/FCL Shipping'],
   },
   {
-    icon: '⚙️',
+    icon: 'settings',
     title: 'Engineering & Capital Goods',
     desc: 'Heavy machinery, plant equipment, and capital goods transported with specialized vehicles and skilled handling professionals.',
     services: ['ODC Transport', 'Heavy Lift', 'Project Cargo', 'Port Handling'],
   },
   {
-    icon: '🥬',
+    icon: 'leaf',
     title: 'Agriculture & Food',
     desc: 'Perishable and non-perishable agri-produce transported with temperature control and food-grade vehicles ensuring freshness.',
     services: ['Reefer Transport', 'Cold Chain', 'Export Cargo', 'Air Freight'],
   },
   {
-    icon: '🏗️',
+    icon: 'building',
     title: 'Construction & Infrastructure',
     desc: 'Bulk construction materials, steel, cement, and equipment moved efficiently to project sites across India with dedicated vehicles.',
     services: ['Bulk Transport', 'FTL Road', 'Steel Transport', 'Dedicated Vehicles'],
   },
   {
-    icon: '💻',
+    icon: 'laptop',
     title: 'Electronics & Technology',
     desc: 'High-value electronics and IT equipment transported securely with anti-static packaging, express air freight, and track-and-trace.',
     services: ['Air Freight', 'Secure Packaging', 'Express Delivery', 'Insurance Support'],
   },
   {
-    icon: '🥤',
+    icon: 'cup',
     title: 'FMCG',
     desc: 'High-volume, time-sensitive FMCG distribution via road transport with multi-point delivery, secondary logistics, and stockist management.',
     services: ['Pan India Road', 'LTL/FTL', 'Multi-drop Delivery', 'Warehouse Connect'],
   },
   {
-    icon: '⚗️',
+    icon: 'flask',
     title: 'Chemicals',
     desc: 'Safe and compliant transport of hazardous and non-hazardous chemicals with trained drivers, proper documentation, and tanker solutions.',
     services: ['Hazmat Transport', 'Tanker Vehicles', 'Compliance Docs', 'Sea Freight'],
   },
   {
-    icon: '🛒',
+    icon: 'shoppingCart',
     title: 'Retail & Consumer Goods',
     desc: 'Retail distribution logistics connecting manufacturers to distributors and retail stores across India with flexible part-load services.',
     services: ['LTL Delivery', 'Retail Distribution', 'Pan India Coverage', 'Returns Handling'],
@@ -88,7 +89,7 @@ const IndustriesPage = () => {
       />
 
       {/* Intro */}
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="section-subtitle">Our Expertise Across Sectors</div>
           <h2 className="section-title mb-4">Logistics for Every Industry</h2>
@@ -99,16 +100,16 @@ const IndustriesPage = () => {
       </section>
 
       {/* Industries grid */}
-      <section className="pb-20 bg-neutral-light">
+      <section className="pb-14 md:pb-20 bg-neutral-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((ind, i) => (
               <div
                 key={i}
-                className="bg-white p-7 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-accent group"
+                className="bg-white p-5 md:p-7 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-accent group"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <span className="text-4xl group-hover:scale-110 transition-transform inline-block">{ind.icon}</span>
+                  <span className="text-4xl group-hover:scale-110 transition-transform inline-block text-primary"><Icon name={ind.icon} className="w-9 h-9" /></span>
                   <div>
                     <h3 className="font-heading text-2xl font-bold uppercase text-primary">{ind.title}</h3>
                   </div>
@@ -131,12 +132,12 @@ const IndustriesPage = () => {
       </section>
 
       {/* Why specialized */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-14 md:py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-accent font-semibold uppercase tracking-widest text-sm mb-3">Specialized Expertise</div>
-              <h2 className="font-heading text-4xl md:text-5xl font-black uppercase leading-tight mb-6">
+              <h2 className="font-heading text-3xl md:text-5xl font-black uppercase leading-tight mb-6">
                 Industry-Specific Logistics That Delivers
               </h2>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
@@ -144,15 +145,15 @@ const IndustriesPage = () => {
               </p>
               <Link to="/contact" className="btn-primary inline-block">Talk to Our Experts</Link>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: '🛡️', title: 'Compliance', desc: 'Industry-specific regulatory compliance and documentation' },
-                { icon: '⚡', title: 'Speed', desc: 'Express solutions for time-critical industries' },
-                { icon: '🌡️', title: 'Cold Chain', desc: 'Temperature-controlled transport for sensitive cargo' },
-                { icon: '📊', title: 'Analytics', desc: 'Data-driven insights for supply chain optimization' },
+                { icon: 'shield', title: 'Compliance', desc: 'Industry-specific regulatory compliance and documentation' },
+                { icon: 'zap', title: 'Speed', desc: 'Express solutions for time-critical industries' },
+                { icon: 'thermometer', title: 'Cold Chain', desc: 'Temperature-controlled transport for sensitive cargo' },
+                { icon: 'chart', title: 'Analytics', desc: 'Data-driven insights for supply chain optimization' },
               ].map((item) => (
                 <div key={item.title} className="bg-white/10 p-5 border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <div className="text-3xl mb-2"><Icon name={item.icon} className="w-7 h-7" /></div>
                   <div className="font-heading text-lg font-bold uppercase text-accent">{item.title}</div>
                   <p className="text-gray-300 text-xs mt-1">{item.desc}</p>
                 </div>

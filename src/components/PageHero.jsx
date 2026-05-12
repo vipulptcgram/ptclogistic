@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 const PageHero = ({ title, subtitle, breadcrumbs = [], bgImage }) => {
   return (
-    <section
-      className="relative py-20 md:py-28 hero-bg diagonal-stripe overflow-hidden"
-    >
+    <section className="relative py-14 md:py-24 hero-bg diagonal-stripe overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute right-0 top-0 w-64 h-64 bg-accent opacity-5 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute left-0 bottom-0 w-48 h-48 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2" />
+      <div className="hidden md:block absolute right-0 top-0 w-64 h-64 bg-accent opacity-5 rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="hidden md:block absolute left-0 bottom-0 w-48 h-48 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Breadcrumb */}
@@ -31,7 +29,7 @@ const PageHero = ({ title, subtitle, breadcrumbs = [], bgImage }) => {
         {subtitle && (
           <div className="section-subtitle">{subtitle}</div>
         )}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black uppercase text-white leading-none" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase text-white leading-none" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
           {title}
         </h1>
         <div className="w-20 h-1 bg-accent mt-4" />
