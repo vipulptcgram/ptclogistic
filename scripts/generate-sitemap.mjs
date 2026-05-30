@@ -4,6 +4,7 @@ import path from 'node:path';
 const rootDir = process.cwd();
 const publicDir = path.join(rootDir, 'public');
 const outFile = path.join(publicDir, 'sitemap.xml');
+const htmlOutFile = path.join(publicDir, 'sitemap.html');
 const appRoutesFile = path.join(rootDir, 'src', 'App.jsx');
 const servicesFile = path.join(rootDir, 'src', 'data', 'servicesData.json');
 
@@ -150,8 +151,46 @@ const main = async () => {
     '',
   ].join('\n');
 
+  const sitemapHtml = [
+    '<!doctype html>',
+    '<html lang="en">',
+    '<head>',
+    '  <meta charset="UTF-8" />',
+    '  <meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+    '  <title>Sitemap | PTC Logistics</title>',
+    '  <meta name="robots" content="index,follow" />',
+    '  <style>',
+    '    body{font-family:Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1f2937;}',
+    '    h1{margin-bottom:8px;}',
+    '    p{color:#4b5563;}',
+    '    ul{padding-left:18px;}',
+    '    li{margin:8px 0;}',
+    '    a{color:#003087;text-decoration:none;}',
+    '    a:hover{text-decoration:underline;}',
+    '    small{color:#6b7280;}',
+    '  </style>',
+    '</head>',
+    '<body>',
+    '  <h1>Website Sitemap</h1>',
+    `  <p>Base URL: <strong>${escapeXml(siteUrl)}</strong></p>`,
+    '  <ul>',
+    ...urlEntries.map((entry) => {
+      const locMatch = entry.match(/<loc>(.*?)<\/loc>/);
+      const lastmodMatch = entry.match(/<lastmod>(.*?)<\/lastmod>/);
+      const loc = locMatch ? locMatch[1] : '';
+      const lastmod = lastmodMatch ? lastmodMatch[1] : '';
+      return `    <li><a href="${loc}">${loc}</a><br/><small>Last updated: ${lastmod}</small></li>`;
+    }),
+    '  </ul>',
+    '</body>',
+    '</html>',
+    '',
+  ].join('\n');
+
   await fs.writeFile(outFile, sitemap, 'utf8');
+  await fs.writeFile(htmlOutFile, sitemapHtml, 'utf8');
   console.log(`Generated sitemap: ${outFile}`);
+  console.log(`Generated sitemap: ${htmlOutFile}`);
   console.log(`Total URLs: ${urlEntries.length}`);
 };
 
