@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import CTABanner from '../components/CTABanner';
 import Icon from '../components/Icon';
+import SEO from '../components/SEO';
 
 const industries = [
   {
@@ -82,6 +83,12 @@ const industries = [
 const IndustriesPage = () => {
   return (
     <div>
+      <SEO
+        title="Industries We Serve | Sector-Specific Logistics Solutions"
+        description="PTC Logistics delivers tailored logistics solutions across manufacturing, pharma, automotive, e-commerce, retail, and more."
+        canonicalPath="/industries"
+        keywords="industry logistics, pharma logistics, manufacturing logistics, e-commerce logistics India"
+      />
       <PageHero
         title="Industries We Serve"
         subtitle="Sector Expertise"

@@ -1,20 +1,61 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import CTABanner from '../components/CTABanner';
 import ServiceCard from '../components/ServiceCard';
 import Icon from '../components/Icon';
+import OptimizedImage from '../components/OptimizedImage';
 import servicesData from '../data/servicesData.json';
+import SEO from '../components/SEO';
+import JsonLd, { toAbsoluteUrl } from '../components/StructuredData';
 
 const ServiceDetailPage = () => {
   const { serviceId } = useParams();
-  const service = servicesData.find((s) => s.id === serviceId);
-  const others = servicesData.filter((s) => s.id !== serviceId);
+  const service = servicesData.find((s) => s.id.toLowerCase() === String(serviceId || '').toLowerCase());
+  const others = servicesData.filter((s) => s.id !== service.id);
+  const [imageBroken, setImageBroken] = useState(false);
 
   if (!service) return <Navigate to="/services" replace />;
+  if (serviceId !== service.id) return <Navigate to={`/services/${service.id}`} replace />;
+
+  const pageTitle = `${service.title} | PTC Logistics`;
+  const pageDescription = service.heroDescription || service.shortDescription;
+  const productImage = useMemo(
+    () => `/images/services/${service.id}.jpg`,
+    [service.id]
+  );
+  const ogImage = imageBroken ? '/images/logo.png' : productImage;
+
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: service.title,
+    description: pageDescription,
+    category: service.subtitle,
+    brand: {
+      '@type': 'Brand',
+      name: 'PTC Logistics',
+    },
+    url: toAbsoluteUrl(`/services/${service.id}`),
+    image: [toAbsoluteUrl(ogImage)],
+    additionalProperty: service.features?.slice(0, 6).map((feature) => ({
+      '@type': 'PropertyValue',
+      name: 'Feature',
+      value: feature,
+    })),
+  };
 
   return (
     <div>
+      <JsonLd data={productSchema} />
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        canonicalPath={`/services/${service.id}`}
+        keywords={`${service.title}, ${service.subtitle}, freight services, logistics India`}
+        ogType="product"
+        image={ogImage}
+      />
       <PageHero
         title={service.title}
         subtitle={service.subtitle}
@@ -30,6 +71,15 @@ const ServiceDetailPage = () => {
             <div className="text-primary mb-4">
               <Icon name={service.icon} className="w-14 h-14" />
             </div>
+            <OptimizedImage
+              src={productImage}
+              alt={`${service.title} logistics service by PTC Logistics`}
+              width={1200}
+              height={675}
+              loading="lazy"
+              onError={() => setImageBroken(true)}
+              className={`${imageBroken ? 'hidden' : 'block'} w-full h-56 md:h-72 object-cover rounded mb-6`}
+            />
             <div className="section-subtitle">{service.subtitle}</div>
             <h2 className="section-title mb-6">{service.title}</h2>
             <p className="text-gray-600 leading-relaxed mb-8 text-sm">{service.heroDescription}</p>

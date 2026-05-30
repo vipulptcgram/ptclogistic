@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import siteData from '../data/siteData.json';
 import servicesData from '../data/servicesData.json';
@@ -6,12 +6,19 @@ import ServiceCard from '../components/ServiceCard';
 import CTABanner from '../components/CTABanner';
 import { StatCard, TestimonialCard } from '../components/UIComponents';
 import Icon from '../components/Icon';
+import SEO from '../components/SEO';
 
 const HomePage = () => {
   const { stats, whyUs, testimonials } = siteData;
 
   return (
     <div>
+      <SEO
+        title="PTC Logistics Pvt. Ltd. | Pan India Transport & Global Freight"
+        description="PTC Logistics provides reliable road transport, air freight, sea freight, and import-export solutions across India and global destinations."
+        canonicalPath="/"
+        keywords="PTC Logistics, logistics company India, road transport, air freight, sea freight, import export logistics, Mumbai logistics"
+      />
       {/* ── HERO ─────────────────────────────────────── */}
       <section className="hero-bg diagonal-stripe relative overflow-hidden min-h-[70vh] md:min-h-[88vh] flex items-center">
         {/* Decorative circles */}

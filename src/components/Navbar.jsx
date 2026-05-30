@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Icon from './Icon';
+import OptimizedImage from './OptimizedImage';
 
 const navLinks = [
   { label: 'Home', to: '/' },
@@ -51,7 +52,14 @@ const Navbar = () => {
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg py-2' : 'bg-white py-3'}`}>
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="PTC Logistics" className="h-10 md:h-14 w-auto object-contain" />
+            <OptimizedImage
+              src="/images/logo.png"
+              alt="PTC Logistics logo"
+              width={220}
+              height={80}
+              priority
+              className="h-10 md:h-14 w-auto object-contain"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

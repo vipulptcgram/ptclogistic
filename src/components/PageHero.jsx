@@ -1,9 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import JsonLd, { toAbsoluteUrl } from './StructuredData';
 
 const PageHero = ({ title, subtitle, breadcrumbs = [], bgImage }) => {
+  const location = useLocation();
+  const crumbItems = [
+    { label: 'Home', to: '/' },
+    ...breadcrumbs.map((crumb) => ({ label: crumb.label, to: crumb.to || location.pathname })),
+  ];
+
+  const breadcrumbSchema = breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: crumbItems.map((crumb, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: crumb.label,
+          item: toAbsoluteUrl(crumb.to),
+        })),
+      }
+    : null;
+
   return (
     <section className="relative py-14 md:py-24 hero-bg diagonal-stripe overflow-hidden">
+      <JsonLd data={breadcrumbSchema} />
       {/* Decorative elements */}
       <div className="hidden md:block absolute right-0 top-0 w-64 h-64 bg-accent opacity-5 rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="hidden md:block absolute left-0 bottom-0 w-48 h-48 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2" />

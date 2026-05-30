@@ -4,6 +4,7 @@ import ServiceCard from '../components/ServiceCard';
 import CTABanner from '../components/CTABanner';
 import Icon from '../components/Icon';
 import servicesData from '../data/servicesData.json';
+import SEO from '../components/SEO';
 
 const processSteps = [
   { step: '01', title: 'Get a Quote', desc: 'Contact us with your cargo details - type, weight, origin, and destination. We provide a fast, competitive quote.', icon: 'clipboard' },
@@ -15,6 +16,12 @@ const processSteps = [
 const ServicesPage = () => {
   return (
     <div>
+      <SEO
+        title="Logistics Services | Road, Air, Sea Freight & Import Export"
+        description="Explore PTC Logistics services including Pan India road transport, air freight, sea freight, and import-export logistics support."
+        canonicalPath="/services"
+        keywords="logistics services India, road transport services, air freight services, sea freight services, import export logistics"
+      />
       <PageHero title="Our Services" subtitle="Logistics Solutions" breadcrumbs={[{ label: 'Services' }]} />
 
       <section className="py-12 md:py-16 bg-white">

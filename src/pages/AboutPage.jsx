@@ -5,6 +5,7 @@ import CTABanner from '../components/CTABanner';
 import siteData from '../data/siteData.json';
 import { StatCard } from '../components/UIComponents';
 import Icon from '../components/Icon';
+import SEO from '../components/SEO';
 
 const milestones = [
   { year: '2010', title: 'Founded', desc: 'PTC Logistics established in Mumbai with a vision to transform freight logistics in India.' },
@@ -27,6 +28,12 @@ const AboutPage = () => {
 
   return (
     <div>
+      <SEO
+        title="About PTC Logistics | Trusted Freight Partner Since 2010"
+        description="Learn about PTC Logistics, our mission, milestones, and experience in delivering dependable road, air, and sea freight solutions."
+        canonicalPath="/about"
+        keywords="about PTC Logistics, logistics company Mumbai, freight forwarding company India"
+      />
       <PageHero
         title="About PTC Logistics"
         subtitle="Our Story"

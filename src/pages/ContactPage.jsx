@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero';
 import Icon from '../components/Icon';
 import siteData from '../data/siteData.json';
 import servicesData from '../data/servicesData.json';
+import SEO from '../components/SEO';
 
 const ContactPage = () => {
   const { company } = siteData;
@@ -20,6 +21,12 @@ const ContactPage = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact PTC Logistics | Get a Freight Quote"
+        description="Contact PTC Logistics for road transport, air freight, sea freight, and import-export shipment support. Request a quote today."
+        canonicalPath="/contact"
+        keywords="contact logistics company, freight quote India, PTC Logistics contact"
+      />
       <PageHero title="Contact Us" subtitle="Get in Touch" breadcrumbs={[{ label: 'Contact' }]} />
 
       <section className="bg-accent py-10">

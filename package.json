@@ -5,11 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "prebuild": "npm run generate:sitemap",
     "build": "vite build",
+    "start": "node server/express-server.mjs",
+    "build:start": "npm run build && npm run start",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icon": "^1.0.0",
