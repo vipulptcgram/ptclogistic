@@ -6,10 +6,12 @@ import ServiceCard from '../components/ServiceCard';
 import Icon from '../components/Icon';
 import OptimizedImage from '../components/OptimizedImage';
 import servicesData from '../data/servicesData.json';
+import siteData from '../data/siteData.json';
 import SEO from '../components/SEO';
 import JsonLd, { toAbsoluteUrl } from '../components/StructuredData';
 
 const ServiceDetailPage = () => {
+  const { company } = siteData;
   const { serviceId } = useParams();
   const service = servicesData.find((s) => s.id.toLowerCase() === String(serviceId || '').toLowerCase());
   const others = servicesData.filter((s) => s.id !== service.id);
@@ -146,7 +148,7 @@ const ServiceDetailPage = () => {
                 </div>
                 <div className="flex gap-3 items-center">
                   <Icon name="clock" className="w-4 h-4 text-accent" />
-                  <span>Mon-Sat: 9 AM - 6:30 PM</span>
+                  <span>{company.workingHours}</span>
                 </div>
               </div>
             </div>

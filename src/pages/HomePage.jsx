@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import siteData from '../data/siteData.json';
 import servicesData from '../data/servicesData.json';
@@ -9,7 +9,7 @@ import Icon from '../components/Icon';
 import SEO from '../components/SEO';
 
 const HomePage = () => {
-  const { stats, whyUs, testimonials } = siteData;
+  const { company, stats, whyUs, testimonials } = siteData;
 
   return (
     <div>
@@ -19,7 +19,7 @@ const HomePage = () => {
         canonicalPath="/"
         keywords="PTC Logistics, logistics company India, road transport, air freight, sea freight, import export logistics, Mumbai logistics"
       />
-      {/* ── HERO ─────────────────────────────────────── */}
+      {/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="hero-bg diagonal-stripe relative overflow-hidden min-h-[70vh] md:min-h-[88vh] flex items-center">
         {/* Decorative circles */}
         <div className="hidden md:block absolute -right-32 top-1/2 w-[500px] h-[500px] rounded-full border border-white/5 -translate-y-1/2" />
@@ -38,7 +38,7 @@ const HomePage = () => {
               Global Logistics.
             </h1>
             <p className="text-gray-300 text-base leading-relaxed max-w-lg mb-8">
-              PTC Logistics provides reliable and efficient freight services through Air, Road, and Sea transportation — ensuring safe, timely, and cost-effective delivery across India and worldwide.
+              PTC Logistics provides reliable and efficient freight services through Air, Road, and Sea transportation â€” ensuring safe, timely, and cost-effective delivery across India and worldwide.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary py-3.5 px-8 text-sm">
@@ -73,7 +73,7 @@ const HomePage = () => {
                   { label: 'Phone', value: '+91 97108 79879', icon: 'phone', href: 'tel:+919710879879' },
                   { label: 'Email', value: 'info@ptclogistics.com', icon: 'mail', href: 'mailto:info@ptclogistics.com' },
                   { label: 'Office', value: 'Virar East, Mumbai', icon: 'mapPin', href: '#' },
-                  { label: 'Hours', value: 'Mon–Sat: 9AM – 6:30PM', icon: 'clock', href: '#' },
+                  { label: 'Hours', value: company.workingHours, icon: 'clock', href: '#' },
                 ].map(({ label, value, icon, href }) => (
                   <a key={label} href={href} className="flex items-start gap-4 group">
                     <span className="w-8 flex justify-center"><Icon name={icon} className="w-5 h-5" /></span>
@@ -85,7 +85,7 @@ const HomePage = () => {
                 ))}
               </div>
               <Link to="/contact" className="block bg-accent text-white text-center font-bold uppercase tracking-wider py-3 text-sm hover:bg-accent-dark transition-colors mt-2">
-                Request a Quote →
+                Request a Quote â†’
               </Link>
             </div>
           </div>
@@ -94,11 +94,11 @@ const HomePage = () => {
         {/* Scroll indicator */}
         <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 text-xs animate-bounce">
           <span>Scroll</span>
-          <span>↓</span>
+          <span>â†“</span>
         </div>
       </section>
 
-      {/* ── STATS ─────────────────────────────────────── */}
+      {/* â”€â”€ STATS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-primary py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -109,7 +109,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ── SERVICES ─────────────────────────────────── */}
+      {/* â”€â”€ SERVICES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-14 md:py-20 bg-neutral-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -132,7 +132,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ── WHY CHOOSE US ─────────────────────────────── */}
+      {/* â”€â”€ WHY CHOOSE US â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-14 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -180,7 +180,7 @@ const HomePage = () => {
                     ))}
                   </div>
                   <Link to="/about" className="inline-block mt-8 border-2 border-accent text-accent font-bold px-6 py-2.5 text-sm uppercase tracking-wider hover:bg-accent hover:text-white transition-all">
-                    About Us →
+                    About Us â†’
                   </Link>
                 </div>
               </div>
@@ -189,7 +189,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ── INDUSTRIES ────────────────────────────────── */}
+      {/* â”€â”€ INDUSTRIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-14 md:py-20 bg-neutral-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -223,7 +223,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ──────────────────────────────── */}
+      {/* â”€â”€ TESTIMONIALS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-14 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -238,10 +238,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────── */}
+      {/* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <CTABanner />
     </div>
   );
 };
 
 export default HomePage;
+

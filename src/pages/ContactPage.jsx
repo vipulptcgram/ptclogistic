@@ -36,7 +36,7 @@ const ContactPage = () => {
               { icon: 'phone', label: 'Call Us', value: company.phone, href: `tel:${company.phone}` },
               { icon: 'mail', label: 'Email Us', value: company.email, href: `mailto:${company.email}` },
               { icon: 'mapPin', label: 'Visit Us', value: 'Virar East, Mumbai', href: '#map' },
-              { icon: 'clock', label: 'Working Hours', value: 'Mon-Sat: 9AM - 6:30PM', href: null },
+              { icon: 'clock', label: 'Working Hours', value: company.workingHours, href: null },
             ].map(({ icon, label, value, href }) => (
               <div key={label}>
                 <div className="mb-2 flex justify-center"><Icon name={icon} className="w-8 h-8" /></div>

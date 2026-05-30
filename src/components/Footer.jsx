@@ -57,7 +57,7 @@ const Footer = () => {
               <li className="flex gap-3"><Icon name="mapPin" className="w-4 h-4 text-accent mt-0.5 shrink-0" /><span>{company.address}</span></li>
               <li className="flex gap-3"><Icon name="phone" className="w-4 h-4 text-accent shrink-0 mt-0.5" /><a href={`tel:${company.phone}`} className="hover:text-accent transition-colors">{company.phone}</a></li>
               <li className="flex gap-3"><Icon name="mail" className="w-4 h-4 text-accent shrink-0 mt-0.5" /><a href={`mailto:${company.email}`} className="hover:text-accent transition-colors">{company.email}</a></li>
-              <li className="flex gap-3"><Icon name="clock" className="w-4 h-4 text-accent shrink-0 mt-0.5" /><span>Mon - Sat: 9:00 AM - 6:30 PM</span></li>
+              <li className="flex gap-3"><Icon name="clock" className="w-4 h-4 text-accent shrink-0 mt-0.5" /><span>{company.workingHours}</span></li>
             </ul>
           </div>
         </div>
