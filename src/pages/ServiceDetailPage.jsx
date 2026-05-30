@@ -146,7 +146,7 @@ const ServiceDetailPage = () => {
                 </div>
                 <div className="flex gap-3 items-center">
                   <Icon name="clock" className="w-4 h-4 text-accent" />
-                  <span>Mon-Sat: 9 AM - 6 PM</span>
+                  <span>Mon-Sat: 9 AM - 6:30 PM</span>
                 </div>
               </div>
             </div>

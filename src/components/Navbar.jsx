@@ -45,7 +45,7 @@ const Navbar = () => {
             <a href="tel:+919710879879" className="hover:text-accent transition-colors inline-flex items-center gap-1.5"><Icon name="phone" className="w-3.5 h-3.5" />+91 97108 79879</a>
             <a href="mailto:info@ptclogistics.com" className="hover:text-accent transition-colors inline-flex items-center gap-1.5"><Icon name="mail" className="w-3.5 h-3.5" />info@ptclogistics.com</a>
           </div>
-          <span className="text-gray-400">Mon - Sat: 9:00 AM - 6:00 PM</span>
+          <span className="text-gray-400">Mon - Sat: 9:00 AM - 6:30 PM</span>
         </div>
       </div>
 

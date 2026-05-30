@@ -73,7 +73,7 @@ const HomePage = () => {
                   { label: 'Phone', value: '+91 97108 79879', icon: 'phone', href: 'tel:+919710879879' },
                   { label: 'Email', value: 'info@ptclogistics.com', icon: 'mail', href: 'mailto:info@ptclogistics.com' },
                   { label: 'Office', value: 'Virar East, Mumbai', icon: 'mapPin', href: '#' },
-                  { label: 'Hours', value: 'Mon–Sat: 9AM – 6PM', icon: 'clock', href: '#' },
+                  { label: 'Hours', value: 'Mon–Sat: 9AM – 6:30PM', icon: 'clock', href: '#' },
                 ].map(({ label, value, icon, href }) => (
                   <a key={label} href={href} className="flex items-start gap-4 group">
                     <span className="w-8 flex justify-center"><Icon name={icon} className="w-5 h-5" /></span>
